@@ -1,0 +1,20 @@
+# Systemd unit file for default slack/chatbot
+#
+# To create clones of this service:
+
+
+[Unit]
+Description=Slack chatbat integrated with IBM Watson 
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/doai/install-scripts/doai-service.sh
+RemainAfterExit=yes
+SuccessExitStatus=0
+User=root
+Group=root
+
+
+[Install]
+WantedBy=multi-user.target

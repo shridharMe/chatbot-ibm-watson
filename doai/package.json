@@ -1,0 +1,31 @@
+{
+  "name": "chatbot-ibm-watson",
+  "version": "1.0.0",
+  "description": "chatbot powered by IBM watson conversation service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "#watson",
+    "#chatbot"
+  ],
+  "author": "shridhar.patil@accenture.com",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.5.1",
+    "change-case": "^3.0.0",
+    "ddg": "^0.0.3",
+    "node-persist": "^2.0.7",
+    "python-shell": "^0.4.0",
+    "resitfy": "^5.0.0-beta-4.0",
+    "restify": "^4.3.0",
+    "simple-spellchecker": "^0.9.0",
+    "slackbots": "^0.5.3",
+    "sqlite3": "^3.1.4",
+    "string": "^3.3.3",
+    "swearjar": "^0.1.3",
+    "unirest": "^0.5.1",
+    "watson-developer-cloud": "^2.7.1"
+  }
+}

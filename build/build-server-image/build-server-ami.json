@@ -1,0 +1,45 @@
+{
+	"variables": {
+	},
+	"builders": [{
+		"type": "amazon-ebs",
+		"ssh_pty": "true",
+		"region": "eu-west-1",		
+		"source_ami": "ami-86c095f5",
+		"instance_type": "m3.large",
+		"ssh_username": "centos",
+		"ssh_port": 22,
+		"ssh_timeout": "10m",
+		"ami_name": "build-server-ami",
+		"ami_regions": "eu-west-1",
+		"ami_block_device_mappings": [{
+			"device_name": "/dev/sda1",
+			"volume_size": 35,
+			"volume_type": "gp2",
+			"delete_on_termination": true
+		}],
+		"access_key": "AKIAJD42SLEIGGN2XAUA",
+		"secret_key": "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",
+		"tags": {
+		    "Name": "build-server-image"
+		  }
+	}],
+	"provisioners": [
+		{
+			"source": "d:\\chatbot-ibm-watson\\build\\yum-repo-image.zip",
+			"destination": "/tmp/yum-repo-image.zip",
+			"type": "file"
+		},		
+		{
+			"source": "d:\\chatbot-ibm-watson\\build\\doai.zip",
+			"destination": "/tmp/doai.zip",
+			"type": "file"
+		},{
+			"type": "shell",
+			"script": "d:\\chatbot-ibm-watson\\build\\build-server-image\\build-server-image.sh",
+  			"pause_before": "10s"
+		}
+		
+	],
+	"post-processors": []
+}

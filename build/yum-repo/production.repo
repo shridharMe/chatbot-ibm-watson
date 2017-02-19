@@ -1,0 +1,6 @@
+[production]
+name=Production Packages  - $basearch
+baseurl=https://s3-eu-west-1.amazonaws.com/doai-yum-repo/production/$basearch/
+enabled=0
+gpgkey=https://s3-eu-west-1.amazonaws.com/doai-yum-repo/rpm-yum-repo-pub.key
+gpgcheck=1

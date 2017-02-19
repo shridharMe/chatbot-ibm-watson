@@ -1,0 +1,16 @@
+'use strict';
+var SpellChecker = require('simple-spellchecker');
+
+
+module.exports = ToolsClient;
+ ToolsClient.prototype.dictionary  = function (searchString,result) {
+ 	SpellChecker.getDictionary("fr-FR", function(err, dictionary) {
+    if(!err) {
+        var misspelled = ! dictionary.spellCheck('maisonn');
+        if(misspelled) {
+            var suggestions = dictionary.getSuggestions('maisonn');
+        }
+    }
+});    
+ }
+
