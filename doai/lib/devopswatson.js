@@ -113,7 +113,7 @@ DevOpsWatson.prototype.conversation_service = function (user_question,reply_from
 
                                 response.context.takeAction=undefined;
                                 doaicontext=response.context;                                    
-                                doaicontext.haveaccess=details[1]; 
+                               /* doaicontext.haveaccess=details[1]; 
 
                                 if(details[2]!=undefined && details[2].EmpID!=undefined)
                                 doaicontext.EmpID=details[2].EmpID;
@@ -131,7 +131,7 @@ DevOpsWatson.prototype.conversation_service = function (user_question,reply_from
                                 doaicontext.LastName=details[2].LastName; 
 
                                 if(details[2]!=undefined && details[2].PhoneNo!=undefined)
-                                doaicontext.PhoneNo=details[2].PhoneNo; 
+                                doaicontext.PhoneNo=details[2].PhoneNo; */
 
 
 

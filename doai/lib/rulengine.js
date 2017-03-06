@@ -25,7 +25,7 @@ Rulengine.prototype.executeRule = function (userQuestion,response,details){
  
 
 
-  /*if( S(doaiResponse).include( 'Predication for')){      
+  if( S(doaiResponse).include( 'Predication for')){      
           var awsdevclient = new RestClient("dev"); 
           awsdevclient.getMLPrediction(param,function(status){
            // console.log(" status "+ JSON.stringify(status.Prediction.predictedScores));
@@ -129,9 +129,9 @@ Rulengine.prototype.executeRule = function (userQuestion,response,details){
 
          
             
-     }else */
+     }else 
 
-     if( param.convoId=="1"){
+     /*if( param.convoId=="1"){
 
          var toolclient = new ToolClient();
 
@@ -157,7 +157,7 @@ Rulengine.prototype.executeRule = function (userQuestion,response,details){
          details(status);
 
          })
-    }
+    }*/
   else{
             
             details(response.response.output.text[0]);

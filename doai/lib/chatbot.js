@@ -87,7 +87,7 @@ ChatBot.prototype._welcomeMessage = function () {
 
     this.users.forEach(function(user){                  
  
-      if (user.name=='shridhar.patil'|| user.name=='shridhar'){
+      if (user.name=='biplab'|| user.name=='shridhar'|| user.name=='vijethhegde'){
        console.log("*************** "+ user.name);
         watson.welcomeMessage(question,function(conversion){
           self.postMessageToUser(user.name, conversion,{as_user: true});
