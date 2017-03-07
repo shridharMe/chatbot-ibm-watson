@@ -129,9 +129,9 @@ Rulengine.prototype.executeRule = function (userQuestion,response,details){
 
          
             
-     }else 
+     }/*else 
 
-     /*if( param.convoId=="1"){
+     if( param.convoId=="1"){
 
          var toolclient = new ToolClient();
 
