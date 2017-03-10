@@ -23,8 +23,9 @@ RestClient.prototype.setEnvironmentDetails  = function () {
 
 RestClient.prototype.getEnvironmentDetails  = function (details) {
   var Request= unirest.get('http://localhost:8085/mumuchan/api/envcount'); 
-    Request.end(function (response) {        
-        details( response.body.message);
+    Request.end(function (response) {     
+    
+        details(response.body.message);
     });
 
 };

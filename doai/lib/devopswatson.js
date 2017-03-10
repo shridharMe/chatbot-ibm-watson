@@ -109,10 +109,13 @@ DevOpsWatson.prototype.conversation_service = function (user_question,reply_from
 
                                 rule.executeRule(user_question,response,function(details){
                              
-                                reply_from_watson(details[0]);
+                                reply_from_watson(details);
 
                                 response.context.takeAction=undefined;
-                                doaicontext=response.context;                                    
+                                doaicontext=response.context;   
+
+
+                                                                 
                                /* doaicontext.haveaccess=details[1]; 
 
                                 if(details[2]!=undefined && details[2].EmpID!=undefined)

@@ -56,6 +56,8 @@ Rulengine.prototype.executeRule = function (userQuestion,response,details){
        
           var awsdevclient = new RestClient("dev"); 
           awsdevclient.setEnvironmentDetails();
+
+
           awsdevclient.getEnvironmentDetails(function(status){
             var  message = " Total count of aws infrastructre components are as following \n EC2 instnaces :" +  status.ec2 ;
             message = message+ "\n S3 Buckets :  " +  status.s3 ;
@@ -65,6 +67,8 @@ Rulengine.prototype.executeRule = function (userQuestion,response,details){
             details(message);
          });   
             
+            
+
      }else if( S(doaiResponse).include('aws ec2 status is')){        
        
           var awsdevclient = new RestClient("dev"); 
