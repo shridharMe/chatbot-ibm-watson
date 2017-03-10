@@ -80,14 +80,17 @@ ChatBot.prototype._firstRunCheck = function () {
 ChatBot.prototype._welcomeMessage = function () {
   var self = this; 
   var watson = new DevOpsWatson();
-  var question ={
-    text:"",
-    user:"shridhar"
-  }
-
+  
     this.users.forEach(function(user){                  
  
       if (user.name=='biplab'|| user.name=='shridhar'|| user.name=='vijethhegde'|| user.name=='shrinidhi.ks'|| user.name=='abhi'){
+
+        var question ={
+        text:"",
+        user:user.name
+        }
+
+
        console.log("*************** "+ user.name);
         watson.welcomeMessage(question,function(conversion){
           self.postMessageToUser(user.name, conversion,{as_user: true});
@@ -96,8 +99,7 @@ ChatBot.prototype._welcomeMessage = function () {
                         
     });    
 
- 
- 
+
   
 };
 
