@@ -83,8 +83,6 @@ ChatBot.prototype._welcomeMessage = function () {
   
     this.users.forEach(function(user){                  
  
-      if (user.name=='biplab'|| user.name=='shridhar'|| user.name=='vijethhegde'|| user.name=='shrinidhi.ks'|| user.name=='abhi'){
-
         var question ={
         text:"",
         user:user.name
@@ -95,7 +93,7 @@ ChatBot.prototype._welcomeMessage = function () {
         watson.welcomeMessage(question,function(conversion){
           self.postMessageToUser(user.name, conversion,{as_user: true});
         });
-      }
+    
                         
     });    
 
@@ -203,17 +201,7 @@ ChatBot.prototype.getResponseFromChatBot = function (question, reply) {
         messageUsername=username;
       });   
   
-     self._isUserAuthorized(messageUsername,function(isAuthorized){
-          
-            if(!isAuthorized){ //user is not authorized
-                 reply( 'Hi ' + messageUsername +"\n Do I know you ? Sorry! I don't chat with strangers");
-               }else{ //user is  authorized                     
-                          question.user=messageUsername;
-                          self._chatResponse(question,function(chatresponse){
-                            reply(chatresponse);
-                          });
-                  }   
-     });
+     );
     
 }
 
@@ -228,14 +216,4 @@ ChatBot.prototype._chatResponse = function(question,chatresponse){
 
 }                  
 
-ChatBot.prototype._isUserAuthorized = function(messageUsername, isAuthorized){
-   var self = this;  
-   self.db.get('SELECT * FROM accesscontrol WHERE allowuser ="'+messageUsername+'"', function (err, record) {
-         if(record!==undefined){
-            isAuthorized(true);     
-           }else{
-            isAuthorized(false);        
-         }
-    });
-
-}
+ 

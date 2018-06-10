@@ -71,11 +71,7 @@ DevOpsWatson.prototype.conversation_service = function (user_question,reply_from
     }else{
          
 
-
-    /*   npl.classifyNPL(user_question.text,function(nplsatus){
-     //   console.log(JSON.stringify(nplsatus, null, 2));
-       });
-*/
+ 
 
 
 
@@ -113,29 +109,6 @@ DevOpsWatson.prototype.conversation_service = function (user_question,reply_from
 
                                 response.context.takeAction=undefined;
                                 doaicontext=response.context;   
-
-
-                                                                 
-                               /* doaicontext.haveaccess=details[1]; 
-
-                                if(details[2]!=undefined && details[2].EmpID!=undefined)
-                                doaicontext.EmpID=details[2].EmpID;
-
-                                if(details[2]!=undefined && details[2].Email!=undefined)
-                                doaicontext.Email=details[2].Email;
-
-                               if(details[2]!=undefined && details[2].ManagerName!=undefined)
-                                doaicontext.ManagerName=details[2].ManagerName; 
-
-                                if(details[2]!=undefined && details[2].FirstName!=undefined)
-                                doaicontext.FirstName=details[2].FirstName; 
-
-                                 if(details[2]!=undefined && details[2].LastName!=undefined)
-                                doaicontext.LastName=details[2].LastName; 
-
-                                if(details[2]!=undefined && details[2].PhoneNo!=undefined)
-                                doaicontext.PhoneNo=details[2].PhoneNo; */
-
 
 
                                         
