@@ -18,8 +18,8 @@
 			"volume_type": "gp2",
 			"delete_on_termination": true
 		}],
-		"access_key": "AKIAJD42SLEIGGN2XAUA",
-		"secret_key": "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",
+		"access_key": "",
+		"secret_key": "",
 		"tags": {
 		    "Name": "build-server-image"
 		  }
